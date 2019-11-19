@@ -26,10 +26,7 @@ private:
     cl::Kernel* fKernel;
     cl::Kernel* pKernel;
 
-    cl::Buffer* bGravity;
     cl::Buffer* bBodies;
-    cl::Buffer* bTimestep;
-    cl::Buffer* bSize;
 
     std::vector<body_t> bodies;
     float G;

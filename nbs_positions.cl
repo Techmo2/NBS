@@ -27,6 +27,10 @@ __kernel void execute(__global struct body_t* bodies, const float dt, const int 
 		a.py += dt * a.vy;
 		a.pz += dt * a.vz;
 
+		a.fx = 0;
+		a.fy = 0;
+		a.fz = 0;
+
 		bodies[i] = a;
     }
 }

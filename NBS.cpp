@@ -11,6 +11,8 @@
 #define VEL_LWR_RANGE 100
 #define VEL_UPR_RANGE 100
 
+extern int line;
+
 const char *getErrorString(cl_int error)
 {
 switch(error){
@@ -118,7 +120,7 @@ int main(int argc, char** argv){
 	try {
 	e->simulate(1000);
 	} catch (cl::Error &e){
-		std::cerr << getErrorString(e.err()) << std::endl;
+		std::cerr << getErrorString(e.err()) << "|" << line << std::endl;
 	}
 
 	e->getDataFromDevice();
